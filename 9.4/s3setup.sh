@@ -13,7 +13,7 @@ if [ -z "${AWS_KEY}" ]; then
     exit 1
 fi
 
-if [ -z "${AWS_SECERT}" ]; then
+if [ -z "${AWS_SECRET}" ]; then
     echo "ERROR: The environment variable secret is not set."
     exit 1
 fi
@@ -23,4 +23,4 @@ fi
 #
 cp /.s3cfg ~/.s3cfg
 echo "access_key=${AWS_KEY}" >> ~/.s3cfg
-echo "secret_key=${AWS_SECERT}" >> ~/.s3cfg
+echo "secret_key=${AWS_SECRET}" >> ~/.s3cfg
